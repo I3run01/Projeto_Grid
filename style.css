@@ -1,0 +1,42 @@
+@charset "UTF-08";
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "nav nav nav"
+    "aside1 section aside2"
+    "footer footer footer"
+    ;
+
+}
+
+nav {
+    grid-area: nav;
+    height: 50px;
+}
+
+nav img {
+    height: 90%;
+    color: aquamarine;
+}
+
+#aside1 {
+    grid-area: aside1;
+
+}
+
+section {
+    grid-area: section;
+
+}
+
+#aside2 {
+    grid-area: aside2;
+
+}
+
+footer {
+    grid-area: footer;
+
+}
