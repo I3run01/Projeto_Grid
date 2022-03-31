@@ -1,4 +1,15 @@
 @charset "UTF-08";
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+
+body {
+    margin: 0;
+}
+
+p, a {
+    font-family: 'Vollkorn', serif;
+
+}
 
 #content {
     display: grid;
@@ -13,12 +24,47 @@
 
 nav {
     grid-area: nav;
-    height: 50px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #8946EE, #AF7CFB );
 }
 
 nav img {
-    height: 90%;
-    color: aquamarine;
+    height: 30%;
+    text-align: left;
+    margin-top: 25px;
+    color: white;
+}
+
+nav > div {
+    width: 250px;
+    margin: 0 2% 0 2%;
+}
+
+nav #icone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > #icone >  div {
+    border-radius: 5px;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    
+}
+
+nav > #icone >  div:hover {
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+nav a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
 }
 
 #aside1 {
