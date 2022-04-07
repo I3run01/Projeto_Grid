@@ -16,6 +16,7 @@
 
 body {
     margin: 0;
+    background-color: var(--BrancoFundo);
 }
 
 p, a {
@@ -26,17 +27,51 @@ p, a {
 
 #content {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr ;
     grid-template-areas:
-    "nav nav"
-    "aside1 section"
-    "aside1 aside2"
-    "footer footer "
+    "nav"
+    "aside1 "
+    "section "
+    "footer "
     ;
 
     grid-gap: 20px;
 
 }
+
+@media screen and (min-width: 600px) {
+    #content {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+        "nav nav"
+        "aside1 section"
+        "aside1 aside2"
+        "footer footer"
+        ;
+    
+        grid-gap: 20px;
+    
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #content {
+        display: grid;
+        grid-template-columns: 1fr 4fr 2fr;
+        grid-template-areas:
+        "nav nav nav"
+        "aside1 section aside2"
+        "footer footer footer"
+        ;
+    
+        grid-gap: 20px;
+    
+    }
+
+}
+
+
 
 nav {
     grid-area: nav;
@@ -86,8 +121,10 @@ nav a {
 #aside1 {
     grid-area: aside1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: var(--BrancoFundo);
+    overflow-x: auto;
+
 }
 
 #aside1 div {
@@ -99,15 +136,40 @@ nav a {
     padding: 15px;
     background-color: var(--BrancoDiv);
     box-shadow:0.5px 0.5px 10px rgba(0, 0, 0, 0.202);
+    margin: 0 10px 0 10px;
+
+
 }
 
+@media screen and (min-width: 600px) {
+    #aside1 {
+        grid-area: aside1;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--BrancoFundo);
+    }
+    
+    #aside1 div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 10px auto 10px auto;
+        width: 30%;
+        padding: 15px;
+        background-color: var(--BrancoDiv);
+        box-shadow:0.5px 0.5px 10px rgba(0, 0, 0, 0.202);
+        
+    }
+
+}
+
+
+
 section {
-    max-width: 900px;
+    max-width: 1000px;
     grid-area: section;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right: 20px;
-
     grid-template-areas:
     "sec01 sec02"
     "sec03 sec03"
@@ -118,6 +180,8 @@ section {
     ;
 
     grid-gap: 20px;
+    background-color: var(--BrancoDiv);
+    padding: 20px;
 }
 
 #sec01 {
@@ -260,21 +324,43 @@ section {
     width: 100%;
 }
 
-#aside2 {
-    grid-area: aside2;
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
+@media screen and (min-width: 600px) {
+    #aside2 {
+        grid-area: aside2;
+        display: flex;
+        justify-content: space-between;
+    }
 
-}
-
-#aside2 img {
+    #aside2 img {
    
-    margin-top: 20px;
-    margin-right: 20px;
-    width: 40%;
-    display: wrap;
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 40%;
+        display: wrap;
+    }
+
 }
+
+@media screen and (min-width: 1200px) {
+    #aside2 {
+        grid-area: aside2;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    
+    }
+
+    #aside2 img {
+   
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 60%;
+        display: wrap;
+    }
+
+}
+
+
 
 footer {
     grid-area: footer;
