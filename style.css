@@ -66,11 +66,18 @@ p, a {
 
 nav {
     grid-area: nav;
-    height: 120px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(90deg, var(--RoxoEscuro), var(--RoxoClaro) );
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        height: 80px;
+    }
+
 }
 
 nav img {
