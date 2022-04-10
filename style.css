@@ -32,16 +32,14 @@ p, a {
     "nav"
     "aside1 "
     "section "
+    "aside2 "
     "footer "
     ;
-
     grid-gap: 20px;
-
 }
 
 @media screen and (min-width: 600px) {
     #content {
-        display: grid;
         grid-template-columns: 1fr 4fr;
         grid-template-areas:
         "nav nav"
@@ -49,24 +47,17 @@ p, a {
         "aside1 aside2"
         "footer footer"
         ;
-    
-        grid-gap: 20px;
-    
     }
 }
 
 @media screen and (min-width: 1200px) {
     #content {
-        display: grid;
         grid-template-columns: 1fr 4fr 2fr;
         grid-template-areas:
         "nav nav nav"
         "aside1 section aside2"
         "footer footer footer"
         ;
-    
-        grid-gap: 20px;
-    
     }
 
 }
@@ -75,7 +66,7 @@ p, a {
 
 nav {
     grid-area: nav;
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(90deg, var(--RoxoEscuro), var(--RoxoClaro) );
@@ -303,38 +294,39 @@ section {
     width: 100%;
 }
 
+#aside2 {
+    grid-area: aside2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+#aside2 img {
+
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 60%;
+    margin: 20px auto 20px auto;
+}
+
 @media screen and (min-width: 600px) {
     #aside2 {
-        grid-area: aside2;
-        display: flex;
-        justify-content: space-between;
+        flex-direction: row;
     }
-
-    #aside2 img {
-   
-        margin-top: 20px;
-        margin-right: 20px;
-        width: 40%;
-        display: wrap;
-    }
-
 }
 
 @media screen and (min-width: 1200px) {
     #aside2 {
-        grid-area: aside2;
-        display: flex;
         justify-content: start;
         flex-direction: column;
     
     }
 
     #aside2 img {
-   
         margin-top: 20px;
         margin-right: 20px;
         width: 60%;
-        display: wrap;
     }
 
 }
