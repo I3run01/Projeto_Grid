@@ -177,11 +177,13 @@ section {
 #sec02 {
     grid-area: sec02;
     display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
 
 }
 
 .sec02div > div {
-    margin-left: 20px;
+    margin: 10px;
 
 }
 
