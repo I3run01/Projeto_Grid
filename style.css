@@ -341,7 +341,7 @@ section {
 footer {
     grid-area: footer;
     background-image: linear-gradient(90deg, var(--RoxoEscuro), var(--RoxoClaro));
-    height: 80px;
+    min-height: 80px;
     padding-top: 15px;
     text-align: center;
     color: var(--BrancoDiv);
