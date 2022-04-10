@@ -120,7 +120,7 @@ nav a {
 }
 
 #aside1 div {
-    margin: 10px auto 10px auto;
+    margin: auto 10px auto 10px;
     width: 30%;
     padding: 15px;
     background-color: var(--BrancoDiv);
@@ -129,6 +129,7 @@ nav a {
 
 @media screen and (min-width: 600px) {
     #aside1 {
+        margin: 10px auto 10px auto;
         flex-direction: column;
     }
 }
@@ -151,7 +152,7 @@ section {
 
     grid-gap: 20px;
     background-color: var(--BrancoDiv);
-    padding: 20px;
+
 }
 
 #sec01 {
